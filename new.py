@@ -7,3 +7,5 @@ tiger = Animal("red")
 print tiger.color
 lion = Animal("yellow")
 print lion.color
+elephant = Animal("gray")
+print elephant.color
