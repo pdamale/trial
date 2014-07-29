@@ -9,3 +9,5 @@ lion = Animal("yellow")
 print lion.color
 elephant = Animal("gray")
 print elephant.color
+monkey = Animal("brown")
+print monkey.color
