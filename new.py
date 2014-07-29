@@ -11,3 +11,5 @@ elephant = Animal("gray")
 print elephant.color
 monkey = Animal("brown")
 print monkey.color
+giraffe = Animal("yellow")
+print giraffe.color
