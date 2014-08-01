@@ -1,5 +1,5 @@
-aplhabets = {}
-aplhabets = {'A' : 1, 'B' : 2, 'C' : 3, 'D' : 4, 'E' : 5, 'F' : 6, 'G' : 7, 'H': 8, 'I' : 9, 'J' : 10, 'K' : 11, 'L' : 12, 'M' : 13, 'N' : 14, 'O' : 15, 'P' : 16, 'Q' : 17, 'R' : 18, 'S' : 19, 'T' : 20, 'U' : 21, 'V' : 22, 'W' : 23, 'X' :24, 'Y' : 25, 'Z' : 26 }
+
+alphabets = {'A' : 1, 'B' : 2, 'C' : 3, 'D' : 4, 'E' : 5, 'F' : 6, 'G' : 7, 'H': 8, 'I' : 9, 'J' : 10, 'K' : 11, 'L' : 12, 'M' : 13, 'N' : 14, 'O' : 15, 'P' : 16, 'Q' : 17, 'R' : 18, 'S' : 19, 'T' : 20, 'U' : 21, 'V' : 22, 'W' : 23, 'X' :24, 'Y' : 25, 'Z' : 26 }
 
 
 new_deck = []
@@ -13,17 +13,27 @@ new_message = new_message.upper()
 key_stream = raw_input("insert key stream")
 key_stream = key_stream.upper()
 
-new_message_num = []
-for item in new_message:
-	for x, y in aplhabets.iteritems():
-		if item == x:
-			new_message_num.append(y) 	
+#new_message_num = []
+#for item in new_message:
+#	for x, y in aplhabets.iteritems():
+#		if item == x:
+#			new_message_num.append(y) 	
 
 key_stream_num = []
 for item in key_stream:
-	for x, y in aplhabets.iteritems():
+	for x, y in alphabets.iteritems():
 		if item == x:
 			key_stream_num.append(y)
+def str2num(sequence):
+	num_sequence = []
+	for item in sequence:
+		for x, y in alphabets.iteritems():
+			if item == x:
+				num_sequence.append(y)
+	return num_sequence
+
+new_message_num = str2num(new_message)
+print new_message_num
 
 encrypt_num = []
 for x in range (0, len(new_message)):
@@ -37,3 +47,4 @@ for item in encrypt_num:
 		if item == y:
 			encrypt.append(x)
 print encrypt
+
